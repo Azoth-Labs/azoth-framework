@@ -14,17 +14,17 @@
       in {
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
-            cmake
-            ninja
-            pkg-config
-            gdb
+            cmake          # CMake build system
+            ninja          # Ninja build system
+            pkg-config     # pkg-config for finding libraries
+            gdb            # GNU debugger
           ];
           buildInputs = with pkgs; [
-            drogon
-            nlohmann_json
-            boost
-            curl
-            sqlite
+            drogon         # C++ web framework
+            nlohmann_json  # JSON library
+            boost          # Boost libraries
+            curl           # libcurl development headers and libraries
+            sqlite         # SQLite development headers and libraries
           ];
         };
       });
